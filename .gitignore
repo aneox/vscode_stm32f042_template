@@ -1,4 +1,5 @@
 build
+.vscode/browse*
 *.map
 *.user
 *.user.*
