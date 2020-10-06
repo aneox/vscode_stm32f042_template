@@ -1,0 +1,30 @@
+file(GLOB_RECURSE SPL_HEADERS CONFIGURE_DEPENDS
+    ${CMAKE_CURRENT_SOURCE_DIR}/*.h
+)
+
+file(GLOB_RECURSE SPL_SOURCES CONFIGURE_DEPENDS
+    ${CMAKE_CURRENT_SOURCE_DIR}/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/*.s
+)
+
+add_library(${PROJECT_NAME}-SPL OBJECT)
+
+target_include_directories(${PROJECT_NAME}-SPL
+    SYSTEM PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/Inc
+        ${CMAKE_CURRENT_SOURCE_DIR}/Drivers/STM32F0xx_StdPeriph_Driver/inc
+        ${CMAKE_CURRENT_SOURCE_DIR}/Drivers/cmsis
+)
+
+target_compile_definitions(${PROJECT_NAME}-SPL
+    PUBLIC
+        USE_STDPERIPH_DRIVER
+        STM32F042
+)
+
+target_sources(${PROJECT_NAME}-SPL
+    PUBLIC
+        ${SPL_HEADERS}
+    PRIVATE
+        ${SPL_HEADERS}
+)

@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "name": "vscode_stm32_c_cpp_properties",
+      "compilerPath": "arm-none-eabi-gcc",
+      "includePath": [
+        "${workspaceRoot}/Inc/",
+        "${workspaceRoot}/Drivers/cmsis/",
+        "${workspaceRoot}/Drivers/STM32F0xx_StdPeriph_Driver/inc/"
+      ],
+      "browse": {
+        "path": ["${workspaceFolder}"],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+      },
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "gcc-arm",
+      "configurationProvider": "ms-vscode.cmake-tools",
+      "defines": ["USE_STDPERIPH_DRIVER", "STM32F042"]
+    }
+  ],
+  "version": 4
+}

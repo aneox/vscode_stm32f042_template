@@ -1,0 +1,63 @@
+{
+  "cmake.configureOnOpen": true,
+  "cmake.configureSettings": {
+    "CMAKE_BUILD_TYPE": "${buildType}"
+  },
+
+  "todo-tree.tree.showScanModeButton": false,
+  "debug.inlineValues": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true
+  }
+}
+
+// Token	Scope
+// Class Template	entity.name.type.class.templated
+// Enumerator	variable.other.enummember
+// Event (C++/CLI)	variable.other.event
+// Function	entity.name.function
+// Function Template	entity.name.function.templated
+// Generic Type (C++/CLI)	entity.name.type.class.generic
+// Global Variable	variable.other.global
+// Label	entity.name.label
+// Local Variable	variable.other.local
+// Macro	entity.name.function.preprocessor
+// Member Field	variable.other.property
+// Member Function	entity.name.function.member
+// Namespace	entity.name.namespace
+// New / Delete	keyword.operator.new
+// Operator Overload Function	entity.name.function.operator
+// Operator Overload Member	entity.name.function.operator.member
+// Parameter	variable.parameter
+// Property (C++/CLI)	variable.other.property.cli
+// Reference Type (C++/CLI)	entity.name.type.class.reference
+// Static Member Field	variable.other.property.static
+// Static Member Function	entity.name.function.member.static
+// Type	entity.name.type
+// User-Defined Literal - Number	entity.name.operator.custom-literal.number
+// User-Defined Literal - Raw	entity.name.operator.custom-literal
+// User-Defined Literal - String	entity.name.operator.custom-literal.string
+// Value Type (C++/CLI)	entity.name.type.class.value
+
+// Semantic Token Selector	Fallback TextMate Scope
+// namespace	entity.name.namespace
+// type	entity.name.type
+// type.defaultLibrary	support.type
+// struct	storage.type.struct
+// class	entity.name.type.class
+// class.defaultLibrary	support.class
+// interface	entity.name.type.interface
+// enum	entity.name.type.enum
+// function	entity.name.function
+// function.defaultLibrary	support.function
+// member	entity.name.function.member
+// macro	entity.name.other.preprocessor.macro
+// variable	variable.other.readwrite , entity.name.variable
+// variable.readonly	variable.other.constant
+// variable.readonly.defaultLibrary	support.constant
+// parameter	variable.parameter
+// property	variable.other.property
+// property.readonly	variable.other.constant.property
+// enumMember	variable.other.enummember
+// event	variable.other.event
