@@ -7,11 +7,18 @@ else()
     message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 endif()
 
+project(empty_f042 C CXX ASM)
+
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build)
+
 if (CMAKE_BUILD_TYPE STREQUAL Debug)
     add_compile_definitions(DEBUG)
+    SET(OUTPUTFILENAME ${PROJECT_NAME}-debug)
 endif()
 
-project(empty_f042 C CXX ASM)
+if (CMAKE_BUILD_TYPE STREQUAL Release)
+    SET(OUTPUTFILENAME ${PROJECT_NAME}-release)
+endif()
 
 include(cmake/utils.cmake)
 
@@ -86,6 +93,9 @@ utils_target_set_linker_script(${PROJECT_NAME}
     ${CMAKE_CURRENT_SOURCE_DIR}/Drivers/STM32F042C6_FLASH.ld
 )
 
-utils_target_generate_hex(${PROJECT_NAME})
+add_custom_target(build-output-directory ALL
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/output)
+    
+# utils_target_generate_hex(${PROJECT_NAME})
 utils_target_generate_bin(${PROJECT_NAME})
 utils_target_print_size(${PROJECT_NAME})
