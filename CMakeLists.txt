@@ -99,3 +99,5 @@ add_custom_target(build-output-directory ALL
 # utils_target_generate_hex(${PROJECT_NAME})
 utils_target_generate_bin(${PROJECT_NAME})
 utils_target_print_size(${PROJECT_NAME})
+
+set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES "${CMAKE_CURRENT_BINARY_DIR}/output")

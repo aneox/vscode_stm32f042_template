@@ -22,8 +22,6 @@ macro(utils_target_generate_bin TARGET_NAME)
     add_dependencies(${TARGET_NAME}-bin
         ${TARGET_NAME}
     )
-
-    set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES "${CMAKE_CURRENT_BINARY_DIR}/output/${OUTPUTFILENAME}.bin")
 endmacro()
 
 macro(utils_target_print_size TARGET_NAME)
